@@ -1,8 +1,5 @@
 const express = require('express');
-const app = express();
-
-const express = require('express'),
-  morgan = require('morgan');
+morgan = require('morgan');
 
 let Movies = [
   {
