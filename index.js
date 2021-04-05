@@ -65,7 +65,7 @@ app.get('/movies', (req, res) => {
 
 // Logging
 
-const app = express();
+
 
 app.use(morgan('common'));
 
