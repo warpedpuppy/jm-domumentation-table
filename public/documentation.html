@@ -1,17 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>documentation</title>
+    <style>
+        table {
+            display: block;
+            margin: 10px auto;
+            border: 1px solid darkgrey;
+            width: 80%;
+            border-collapse: collapse;
+        }
+        
+        td,
+        th {
+            border: 1px solid darkgrey;
+            padding: 10px;
+        }
+    </style>
 </head>
-<body> 
+
+<body>
     <h1>documentation</h1>
-  <p>To build the server-side component of a “movies” web application. The web
-    application will provide users with access to information about different
-    movies, directors, and genres. Users will be able to sign up, update their
-    personal information, and create a list of their favorite movies.</p>  
+    <table>
+        <thead>
+            <tr>
+                <th>Business Logic</th>
+                <th>URL</th>
+                <th>HTTP Method</th>
+                <th>Request body data format</th>
+                <th>Response body data format</th>
+            </tr>
+            <tr>
+                <td>Get a list of movies</td>
+                <td>/movies</td>
+                <td>GET</td>
+                <td>None</td>
+                <td>JSON</td>
+            </tr>
+            <tr>
+                <td>Get a list of the movies' titles</td>
+                <td>/movies/titles</td>
+                <td>GET</td>
+                <td>None</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>Get the movie's genre</td>
+                <td>/movies/genre</td>
+                <td>GET</td>
+                <td>None, but eventually the movie's id in json format</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>Get the movie's director</td>
+                <td>/movies/director</td>
+                <td>GET</td>
+                <td>None, but eventually the movie's id in json format</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>Creating a new user</td>
+                <td>/user</td>
+                <td>POST</td>
+                <td>None, but eventually user data in json format</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>Adds movie to user's favorite list</td>
+                <td>/user/name/add</td>
+                <td>POST</td>
+                <td>None, but eventually the movie's id</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>Allows user to edit their profile</td>
+                <td>/user/name/edit</td>
+                <td>PUT</td>
+                <td>None, but eventually new user info</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>Allows user to delete their account</td>
+                <td>/user/name/info</td>
+                <td>DELETE</td>
+                <td>None, but eventually user info</td>
+                <td>String</td>
+            </tr>
+            <tr>
+                <td>Allows user to remove movies from their favorite list</td>
+                <td>/user/name/delete</td>
+                <td>DELETE</td>
+                <td>None, but eventually movie and user info</td>
+                <td>String</td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <p>To build the server-side component of a “movies” web application. The web application will provide users with access to information about different movies, directors, and genres. Users will be able to sign up, update their personal information, and
+        create a list of their favorite movies.</p>
     <script type="module" src="server.js"></script>
 </body>
+
 </html>
